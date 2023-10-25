@@ -1,3 +1,5 @@
+const before = Date.now()
+
 let cache = []
 
 const logBetween = (lowNum, highNum) => {
@@ -31,10 +33,13 @@ const logBetween = (lowNum, highNum) => {
     return cache.slice(cache.indexOf(lowNum), cache.indexOf(highNum) + 1)
 }
 
-console.log(logBetween(-1, 2))
-console.log(logBetween(14, 6))
-console.log(logBetween(4, 6))
-console.log(logBetween(1, 5))
+console.log(logBetween(0, 10000))
+console.log(logBetween(0, 100000))
+
+const after = Date.now()
+
+console.log(after - before + 'ms')
+
 
 
 // This function is O(n) on space-time complexity. Can we make it better? let's see:
