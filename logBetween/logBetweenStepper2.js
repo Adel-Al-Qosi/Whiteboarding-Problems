@@ -29,7 +29,7 @@ class Node {
     toArray() {
       const result = [];
       let current = this.head;
-      while (current !== null) {
+      while (current) {
         result.push(current.value);
         current = current.next;
       }
